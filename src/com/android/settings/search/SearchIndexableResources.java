@@ -55,6 +55,7 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 
 import com.android.settings.crdroid.ExtraSettings;
+import com.android.settings.crdroid.AmbientSettings;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -318,6 +319,14 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         ExtraSettings.class.getName(),
                         R.drawable.ic_settings_system));
+
+        // crDroid additions
+        sResMap.put(AmbientSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AmbientSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        AmbientSettings.class.getName(),
+                        R.drawable.ic_settings_display));
     }
 
     private SearchIndexableResources() {
