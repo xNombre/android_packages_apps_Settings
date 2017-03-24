@@ -3102,6 +3102,13 @@
                 android:value="com.crdroid.settings.fragments.OmniJawsSettings" />
         </activity>
 
+        <activity android:name="com.crdroid.settings.fragments.ChangelogActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
