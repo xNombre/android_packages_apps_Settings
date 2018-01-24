@@ -1,10 +1,13 @@
-    <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2017 crDroid Android Project
+     Copyright (C) 2016-2018 crDroid Android Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
+
           http://www.apache.org/licenses/LICENSE-2.0
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -31,7 +34,7 @@
     <string name="app_ops_cat_bootup">Avvio</string>
 		
     <!-- App ops labels -->
-	  <string name="app_ops_access_camera">camera</string>
+    <string name="app_ops_access_camera">camera</string>
     <string name="app_ops_access_location">posizione</string>
     <string name="app_ops_access_notifications">notifiche</string>
     <string name="app_ops_activate_vpn">VPN</string>
@@ -98,7 +101,7 @@
     <string name="app_ops_app_start_foreground">esegui in primo piano</string>
     <string name="app_ops_answer_phone_calls">rispondi alle chiamate</string>
     <string name="app_ops_boot_completed">avvio automatico</string>
-    
+
     <!-- App ops detail -->
     <string name="app_ops_entry_summary"><xliff:g id="op">%1$s</xliff:g> (used <xliff:g id="count">%2$s</xliff:g>)</string>
     <string name="app_ops_allowed_count">Permetti <xliff:g id="count" example="2 times">%s</xliff:g></string>
@@ -112,7 +115,8 @@
     <string name="app_ops_reset_confirm_mesg">Sei sicuro di voler ripristinare i contatori?</string>
 
     <!-- Quick unlock -->
-   <string name="unlock_quick_unlock_control_title">Sblocco rapido</string>
-   <string name="unlock_quick_unlock_control_summary">Sblocca automaticamente quando viene inserito il PIN/password corretta</string>
+    <string name="unlock_quick_unlock_control_title">Sblocco rapido</string>
+    <string name="unlock_quick_unlock_control_summary">Sblocca automaticamente quando viene inserito il PIN/password corretta</string>
 
     <string name="background_processes_settings_title">Processi in background</string>
+</resources>
