@@ -112,15 +112,27 @@ public class AppOpsDetails extends InstrumentedPreferenceFragment {
                         mOperationsSection, false);
                 mOperationsSection.addView(view);
                 String perm = AppOpsManager.opToPermission(firstOp.getOp());
+                if (perm != null) {
+                    try {
+                        PermissionInfo pi = mPm.getPermissionInfo(perm, 0);
+                        if (pi.group != null && !lastPermGroup.equals(pi.group)) {
+                            lastPermGroup = pi.group;
+                            PermissionGroupInfo pgi = mPm.getPermissionGroupInfo(pi.group, 0);
+                            if (pgi.icon != 0) {
+                                ((ImageView)view.findViewById(R.id.op_icon)).setImageDrawable(
+                                        pgi.loadIcon(mPm));
+                            }
+                        }
+                    } catch (NameNotFoundException e) {
+                    }
+                }
                 ((TextView)view.findViewById(R.id.op_name)).setText(
                         entry.getSwitchText(mState));
-                ((TextView)view.findViewById(R.id.op_counts)).setText(
-                        entry.getCountsText(res));
                 ((TextView)view.findViewById(R.id.op_time)).setText(
                         entry.getTimeText(res, true));
                 Switch sw = (Switch)view.findViewById(R.id.switchWidget);
                 final int switchOp = AppOpsManager.opToSwitch(firstOp.getOp());
-                sw.setChecked(mAppOps.checkOpNoThrow(switchOp, entry.getPackageOps().getUid(),
+                sw.setChecked(mAppOps.checkOp(switchOp, entry.getPackageOps().getUid(),
                         entry.getPackageOps().getPackageName()) == AppOpsManager.MODE_ALLOWED);
                 sw.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
                     @Override
