@@ -3366,7 +3366,7 @@
         <activity
             android:name="com.crdroid.settings.crDroidOTA"
             android:label="@string/ota_crdroid_title"
-            android:icon="@drawable/ic_ota">
+            android:icon="@drawable/ic_launcher_settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
